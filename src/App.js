@@ -1,10 +1,16 @@
 import React from 'react';
-import HomePage from './components/Homepage';
+import HeaderContainer from './components/HeaderContainer';
+import DiscoverAvailableServicesContainer from './components/DiscoverAvailableServicesContainer';
+import RecommendedServicesContainer from './components/RecommendedServicesContainer';
+import FooterContainer from './components/FooterContainer';
 
 function App() {
   return (
     <div className="App">
-      <HomePage />
+      <HeaderContainer />
+      {/* <DiscoverAvailableServicesContainer />
+      <RecommendedServicesContainer />
+      <FooterContainer /> */}
     </div>
   );
 }
