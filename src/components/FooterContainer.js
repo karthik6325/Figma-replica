@@ -24,7 +24,7 @@ function Footer() {
   );
 }
 
-const footerStyle = {
+const footerStyle={
   backgroundColor: '#D8BFD8',
   color: '#fff',
   padding: '1rem 0',
