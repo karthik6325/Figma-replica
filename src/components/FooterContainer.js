@@ -5,21 +5,8 @@ function Footer() {
   return (
     <footer style={footerStyle}>
       <Container>
-        <Row className="align-items-center">
-          <Col xs={12} md={6}>
-            <span style={{ color: 'black' }}>Current Culture: United States - English</span>
-          </Col>
-          <Col xs={12} md={6}>
-            <div className="d-flex justify-content-center justify-content-md-end">
-              <a href="#" style={{ color: 'black', marginRight: '10px', textDecoration: 'none' }}>Contact Us</a>
-              <a href="#" style={{ color: 'black', marginRight: '10px', textDecoration: 'none' }}>Privacy and Cookies</a>
-              <a href="#" style={{ color: 'black', marginRight: '10px', textDecoration: 'none' }}>Trademark</a>
-              <a href="#" style={{ color: 'black', marginRight: '10px', textDecoration: 'none' }}>About Our Ads</a>
-              <span style={{ color: 'black' }}>&copy; {new Date().getFullYear()} Microsoft</span>
-            </div>
-          </Col>
-        </Row>
-        <hr style={{ marginTop: '1rem', marginBottom: '1rem' }} />
+        
+        
         <Row>
           <Col xs={12} md={4}>
             <h5 style={{ color: 'black' }}>Service Hub</h5>
@@ -56,6 +43,20 @@ function Footer() {
               <li><a href="#" style={{ color: 'black', textDecoration: 'none' }}>Office 365 Roadmap</a></li>
               <li><a href="#" style={{ color: 'black', textDecoration: 'none' }}>Assessments</a></li>
             </ul>
+          </Col>
+        </Row>
+        <Row className="align-items-center">
+          <Col xs={12} md={6}>
+            <span style={{ color: 'black' }}>Current Culture: United States - English</span>
+          </Col>
+          <Col xs={12} md={6}>
+            <div className="d-flex justify-content-center justify-content-md-end">
+              <a href="#" style={{ color: 'black', marginRight: '10px', textDecoration: 'none' }}>Contact Us</a>
+              <a href="#" style={{ color: 'black', marginRight: '10px', textDecoration: 'none' }}>Privacy and Cookies</a>
+              <a href="#" style={{ color: 'black', marginRight: '10px', textDecoration: 'none' }}>Trademark</a>
+              <a href="#" style={{ color: 'black', marginRight: '10px', textDecoration: 'none' }}>About Our Ads</a>
+              <span style={{ color: 'black' }}>&copy; {new Date().getFullYear()} Microsoft</span>
+            </div>
           </Col>
         </Row>
       </Container>
