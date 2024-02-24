@@ -1,0 +1,15 @@
+.card-image1 {
+    background: url("../assets/images/one.png");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+  }
+  
+  .card-image2 {
+    background: url("../assets/images/two.png");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+  }
+  
+  
