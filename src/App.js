@@ -1,16 +1,15 @@
 import React from 'react';
 import HeaderContainer from './components/HeaderContainer';
 import DiscoverAvailableServicesContainer from './components/DiscoverAvailableServicesContainer';
+import Footer from './components/FooterContainer';
 import RecommendedServicesContainer from './components/RecommendedServicesContainer';
-import FooterContainer from './components/FooterContainer';
 
 function App() {
   return (
     <div className="App">
       <HeaderContainer />
-      {/* <DiscoverAvailableServicesContainer />
-      <RecommendedServicesContainer />
-      <FooterContainer /> */}
+      <RecommendedServicesContainer/>
+      <Footer/>
     </div>
   );
 }
