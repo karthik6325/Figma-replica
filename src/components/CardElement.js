@@ -26,7 +26,13 @@ function CardElement() {
     textAlign: 'center',
     backgroundColor: '#f0e5f5',
     padding: '20px',
+    width: '63%',
+    borderRadius: '15px', // Add rounded corners
+    overflow: 'hidden', // Hide overflow for rounded corners
+    margin: '0 auto', // Center the container
   };
+  
+  
 
   const cardStyle = {
     width: '18rem',

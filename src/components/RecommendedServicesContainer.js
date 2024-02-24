@@ -10,7 +10,7 @@ function BasicExample() {
   };
 
   return (
-    <div className="container-fluid mb-5">
+    <div className="container-fluid mb-5 mt-4" style={{ margin: '0 auto' }}> {/* Add margin-top and center the component */}
       <div className="row justify-content-center">
         <div className="col-12 col-md-8 col-lg-6">
           <h2 className="text-center">Explore recommended services for you</h2>
@@ -52,4 +52,5 @@ function BasicExample() {
     </div>
   );
 }
+
 export default BasicExample;

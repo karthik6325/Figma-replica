@@ -5,8 +5,7 @@ function DiscoverAvailableServicesContainer () {
   const headerStyle = {
     textAlign: 'center',
     fontWeight: 'bold',
-    marginBottom: '20px',
-    marginTop: '20px',
+    marginBottom: '3%',
   };
 
   return (
