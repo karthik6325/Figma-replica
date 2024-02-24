@@ -1,5 +1,31 @@
+
+
+.containers {
+    display: flex;
+    flex-direction: column;
+}
+
 .carousal-container{
     background: url("../assets/images/stock-3.jpg");
     /* background-color: black; */
     height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+
+  .containers {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ensure the container takes full viewport height */
+}
+
+.navbar-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Adjust z-index as needed */
+}
+
+  
+

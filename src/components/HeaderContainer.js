@@ -6,8 +6,8 @@ import "./HeaderContainer.css"
 
 const HeaderContainer = () => {
     return (
-        <div className='container'>
-            <div>
+        <div className='containers'>
+            <div className='navbar-container'>
                 <NavbarScroll />
             </div>
             <div className='carousal-container'>
