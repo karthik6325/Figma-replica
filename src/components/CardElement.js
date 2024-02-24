@@ -1,29 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
-import axios from 'axios';
+import Spinner from 'react-bootstrap/Spinner';
+import { NumberService } from '../service/NumberService';
 
 function CardElement() {
   const [cardTitles, setCardTitles] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchNumberFact = async () => {
-      const promises = Array.from({ length: 3 }, (_, index) =>
-        axios.get(`http://numbersapi.com/random?min=10&max=100`)
-      );
-
+    const fetchNumbers = async () => {
       try {
-        const results = await Promise.all(promises);
-        const newCardTitles = results.map((response) => {
-          const number = parseInt(response.data.split(' ')[0], 10);
-          return number;
-        });
+        const newCardTitles = await NumberService(3);
         setCardTitles(newCardTitles);
       } catch (error) {
-        console.error('Error fetching number facts', error);
+        console.error('Error fetching numbers', error);
+      } finally {
+        setLoading(false);
       }
     };
 
-    fetchNumberFact();
+    fetchNumbers();
   }, []);
 
   const cardContainerStyle = {
@@ -58,19 +54,23 @@ function CardElement() {
 
   return (
     <div style={cardContainerStyle}>
-      {cardTitles.map((title, index) => (
-        <Card key={index} style={cardStyle}>
-          <Card.Body>
-            <Card.Title style={titleStyle}>{title}</Card.Title>
-            <Card.Subtitle className="mb-2 text-muted text-left" style={subtitleStyle}>
-              Sample Handling
-            </Card.Subtitle>
-            <Card.Text className="text-left" style={textStyle}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sollicitudin in lectus vitae sollicitudin.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      ))}
+      {loading ? (
+        <Spinner animation="border" variant="primary" />
+      ) : (
+        cardTitles.map((title, index) => (
+          <Card key={index} style={cardStyle}>
+            <Card.Body>
+              <Card.Title style={titleStyle}>{title}</Card.Title>
+              <Card.Subtitle className="mb-2 text-muted text-left" style={subtitleStyle}>
+                Sample Handling
+              </Card.Subtitle>
+              <Card.Text className="text-left" style={textStyle}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sollicitudin in lectus vitae sollicitudin.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        ))
+      )}
     </div>
   );
 }
