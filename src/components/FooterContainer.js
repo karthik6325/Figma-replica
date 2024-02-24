@@ -7,7 +7,7 @@ function Footer() {
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6}>
-            <span>Current Culture: United States - English</span>
+            <span style={{ color: 'black' }}>Current Culture: United States - English</span>
           </Col>
           <Col xs={12} md={6}>
             <div className="d-flex justify-content-center justify-content-md-end">
@@ -15,7 +15,7 @@ function Footer() {
               <a href="#" style={{ color: 'black', marginRight: '10px' }}>Privacy and Cookies</a>
               <a href="#" style={{ color: 'black', marginRight: '10px' }}>Trademark</a>
               <a href="#" style={{ color: 'black', marginRight: '10px' }}>About Our Ads</a>
-              <span>&copy; {new Date().getFullYear()} Your Company Name</span>
+              <span style={{ color: 'black' }}>&copy; {new Date().getFullYear()} Microsoft</span>
             </div>
           </Col>
         </Row>
@@ -24,10 +24,10 @@ function Footer() {
   );
 }
 
-const footerStyle={
-  backgroundColor: '#D8BFD8',
+const footerStyle = {
+  backgroundColor: '#f0e5f5',
   color: '#fff',
-  padding: '1rem 0',
+  padding: '2rem 0', 
 };
 
 export default Footer;

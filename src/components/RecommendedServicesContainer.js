@@ -4,8 +4,13 @@ import Card from 'react-bootstrap/Card';
 import "./RecommendedServicesContainer.css"
 
 function BasicExample() {
+  const buttonStyle = {
+    backgroundColor: '#9300e8',
+    borderColor: '#9300e8',
+  };
+
   return (
-    <div className="container-fluid">
+    <div className="container-fluid mb-5">
       <div className="row justify-content-center">
         <div className="col-12 col-md-8 col-lg-6">
           <h2 className="text-center">Explore recommended services for you</h2>
@@ -13,25 +18,33 @@ function BasicExample() {
         </div>
       </div>
       <div className="row justify-content-center">
-        <div className="col-12 col-md-6 col-lg-4">
-          <Card className="card-image1">
-            <Card.Body>
-              <Card.Title>Questions</Card.Title>
-              <Card.Text>
-                Learn about our services through
-              </Card.Text>
-              <Button variant="primary">View FAQS</Button>
+        <div className="col-12 col-md-6 col-lg-4 mb-3">
+          <Card className="card-image1" style={{ width: '25rem' }}>
+            <Card.Body className="text-center d-flex flex-column justify-content-between" style={{ height: '20rem' }}>
+              <div>
+                <Card.Title className="text-center font-weight-bold">Questions</Card.Title>
+                <Card.Text>
+                  Learn about our services through
+                </Card.Text>
+              </div>
+              <div className="text-center mt-auto">
+                <Button variant="primary" style={buttonStyle}>View FAQS</Button>
+              </div>
             </Card.Body>
           </Card>
         </div>
-        <div className="col-12 col-md-6 col-lg-4">
-          <Card className="card-image2">
-            <Card.Body>
-              <Card.Title>Stay up to date</Card.Title>
-              <Card.Text>
-                Learn about our product updates
-              </Card.Text>
-              <Button variant="primary">View FAQS</Button>
+        <div className="col-12 col-md-6 col-lg-4 mb-3">
+          <Card className="card-image2" style={{ width: '25rem' }}>
+            <Card.Body className="text-center d-flex flex-column justify-content-between" style={{ height: '20rem' }}>
+              <div>
+                <Card.Title className="text-center font-weight-bold">Stay up to date</Card.Title>
+                <Card.Text>
+                  Learn about our product updates
+                </Card.Text>
+              </div>
+              <div className="text-center mt-auto">
+                <Button variant="primary" style={buttonStyle}>View FAQS</Button>
+              </div>
             </Card.Body>
           </Card>
         </div>
@@ -39,5 +52,4 @@ function BasicExample() {
     </div>
   );
 }
-
 export default BasicExample;
