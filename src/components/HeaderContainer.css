@@ -1,0 +1,5 @@
+.carousal-container{
+    background: url("../assets/images/stock-3.jpg");
+    /* background-color: black; */
+    height: 100vh;
+}
