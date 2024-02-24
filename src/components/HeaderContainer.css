@@ -1,31 +1,26 @@
-
-
 .containers {
     display: flex;
     flex-direction: column;
 }
 
-.carousal-container{
+.carousal-container {
     background: url("../assets/images/stock-3.jpg");
     /* background-color: black; */
-    height: 100vh;
+    height: 80vh;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 0 0 15px 15px; /* Rounded bottom corners */
 }
 
-
-  .containers {
+.containers {
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Ensure the container takes full viewport height */
+    height: 100vh;
 }
 
 .navbar-container {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Adjust z-index as needed */
+    z-index: 1000;
 }
-
-  
-
