@@ -1,38 +1,33 @@
 import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 
-const Footer = () => {
+function Footer() {
   return (
     <footer style={footerStyle}>
-      <div style={leftSideStyle}>
-        <span>Contact Us</span>
-        <span>Privacy and Cookies</span>
-        <span>Trademark</span>
-        <span>About Our Ads</span>
-        <span>&copy; 2024 Your Company Name</span>
-      </div>
-      <div style={rightSideStyle}>
-        <span>Current Culture: United States - English</span>
-      </div>
+      <Container>
+        <Row className="align-items-center">
+          <Col xs={12} md={6}>
+            <span>Current Culture: United States - English</span>
+          </Col>
+          <Col xs={12} md={6}>
+            <div className="d-flex justify-content-center justify-content-md-end">
+              <a href="#" style={{ color: 'black', marginRight: '10px' }}>Contact Us</a>
+              <a href="#" style={{ color: 'black', marginRight: '10px' }}>Privacy and Cookies</a>
+              <a href="#" style={{ color: 'black', marginRight: '10px' }}>Trademark</a>
+              <a href="#" style={{ color: 'black', marginRight: '10px' }}>About Our Ads</a>
+              <span>&copy; {new Date().getFullYear()} Your Company Name</span>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </footer>
   );
 }
 
-// Styles
 const footerStyle = {
-  backgroundColor: '#333',
+  backgroundColor: '#D8BFD8',
   color: '#fff',
-  padding: '10px 0',
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-};
-
-const leftSideStyle = {
-  marginLeft: '20px',
-};
-
-const rightSideStyle = {
-  marginRight: '20px',
+  padding: '1rem 0',
 };
 
 export default Footer;
